@@ -1,23 +1,19 @@
 ﻿namespace knightmoves;
 
-public class Account 
-{
+public class Account {
     public static int OriginalTaxRate = 10;
-    public static int[] CurrentLedger = { 10, 20, 30, 40, 50 };
+    public static int[] CurrentLedger = {10, 20, 30, 40, 50};
 
-    
-    public static int NewTaxRate = OriginalTaxRate;
-    public static int[] CopyLedger = CurrentLedger;
+    public int NewTaxRate = OriginalTaxRate;
+    public int[] CopyLedger = CurrentLedger;
 
-    public int[] UpdateLedger(int correction)
-    {
-        CurrentLedger[0] = correction;     
-        return CurrentLedger;              
+    public int[] UpdateLedger(int correction) {
+        CurrentLedger[0] = correction;
+        return CurrentLedger;
     }
 
-    public int AdjustTaxRate(int taxRate)
-    {
-        NewTaxRate = taxRate;             
-        return NewTaxRate;                
+    public int AdjustTaxRate(int taxRate) {
+        NewTaxRate = taxRate;
+        return NewTaxRate;
     }
 }
